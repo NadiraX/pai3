@@ -39,9 +39,9 @@ function checkEmailAndFocus(obj,msg,val){
 function isEmailValid(str) {
  let email = /^[a-zA-Z_0-9\.]+@[a-zA-Z_0-9\.]+\.[a-zA-Z][a-zA-Z]+$/;
  if (email.test(str))
- return true;
- else {
  return false;
+ else {
+ return true;
  }
 }
 
@@ -50,7 +50,7 @@ function isEmailValid(str) {
 function validate(formularz) {
 	if(!checkStringAndFocus(formularz.elements["f_imie"],"podaj imie",isWhiteSpaceOrEmpty)) return false;
 	if(!checkStringAndFocus(formularz.elements["f_nazwisko"],"podaj nazwisko",isWhiteSpaceOrEmpty)) return false;
-	if(!checkEmailAndFocus(formularz.elements["f_email"],"podaj email",isEmailValid)) return false;
+	if(!checkStringAndFocus(formularz.elements["f_email"],"podaj wlasciwy email",isEmailValid)) return false;
 	if(!checkStringAndFocus(formularz.elements["f_kod"],"podaj kod",isWhiteSpaceOrEmpty)) return false;
 	if(!checkStringAndFocus(formularz.elements["f_ulica"],"podaj ulica",isWhiteSpaceOrEmpty)) return false;
 	if(!checkStringAndFocus(formularz.elements["f_miasto"],"podaj miasto",isWhiteSpaceOrEmpty)) return false;
